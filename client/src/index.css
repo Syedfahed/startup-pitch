@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Startup Pitch Evaluator Design System - Modern Blue/Gray Theme */
+
+@layer base {
+  :root {
+    /* Background & Surface Colors */
+    --background: 220 15% 98%;
+    --foreground: 220 40% 15%;
+    --surface: 220 20% 99%;
+    --surface-secondary: 220 15% 96%;
+
+    /* Card & Popover Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 15%;
+    --card-shadow: 220 30% 85%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 15%;
+
+    /* Primary Brand Colors - Tech Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 85% 55%;
+    --primary-muted: 217 50% 95%;
+
+    /* Secondary Colors - Soft Gray */
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 35% 25%;
+    --secondary-hover: 220 20% 94%;
+
+    /* Accent Colors - Success & Warning */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+    --warning: 45 93% 47%;
+    --warning-foreground: 45 25% 15%;
+
+    /* Muted Colors */
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 25% 45%;
+
+    /* Destructive Colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border & Input Colors */
+    --border: 220 20% 90%;
+    --input: 220 20% 94%;
+    --ring: 217 91% 60%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 85% 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 20% 99%), hsl(220 15% 97%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(220 70% 50%) 50%, hsl(223 75% 45%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 30% 85% / 0.15);
+    --shadow-md: 0 4px 6px -1px hsl(220 30% 85% / 0.15), 0 2px 4px -1px hsl(220 30% 85% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(220 30% 85% / 0.15), 0 4px 6px -2px hsl(220 30% 85% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(220 30% 85% / 0.15), 0 10px 10px -5px hsl(220 30% 85% / 0.1);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3);
+
+    /* Radius */
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Background & Surface Colors */
+    --background: 220 30% 8%;
+    --foreground: 220 15% 95%;
+    --surface: 220 25% 10%;
+    --surface-secondary: 220 20% 12%;
+
+    /* Dark Mode Card & Popover Colors */
+    --card: 220 25% 10%;
+    --card-foreground: 220 15% 95%;
+    --card-shadow: 220 40% 5%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 220 15% 95%;
+
+    /* Dark Mode Primary Colors */
+    --primary: 217 91% 65%;
+    --primary-foreground: 220 25% 8%;
+    --primary-hover: 217 85% 70%;
+    --primary-muted: 217 50% 15%;
+
+    /* Dark Mode Secondary Colors */
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 220 15% 90%;
+    --secondary-hover: 220 25% 18%;
+
+    /* Dark Mode Accent Colors */
+    --accent: 142 76% 40%;
+    --accent-foreground: 220 25% 8%;
+    --warning: 45 93% 55%;
+    --warning-foreground: 45 25% 10%;
+
+    /* Dark Mode Muted Colors */
+    --muted: 220 20% 15%;
+    --muted-foreground: 220 15% 65%;
+
+    /* Dark Mode Destructive Colors */
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 220 15% 95%;
+
+    /* Dark Mode Border & Input Colors */
+    --border: 220 25% 20%;
+    --input: 220 25% 18%;
+    --ring: 217 91% 65%;
+
+    /* Dark Mode Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 65%), hsl(217 85% 75%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 25% 10%), hsl(220 20% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 65%) 0%, hsl(220 70% 55%) 50%, hsl(223 75% 50%) 100%);
+
+    /* Dark Mode Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 40% 5% / 0.3);
+    --shadow-md: 0 4px 6px -1px hsl(220 40% 5% / 0.3), 0 2px 4px -1px hsl(220 40% 5% / 0.2);
+    --shadow-lg: 0 10px 15px -3px hsl(220 40% 5% / 0.3), 0 4px 6px -2px hsl(220 40% 5% / 0.2);
+    --shadow-xl: 0 20px 25px -5px hsl(220 40% 5% / 0.3), 0 10px 10px -5px hsl(220 40% 5% / 0.2);
+    --shadow-glow: 0 0 30px hsl(217 91% 65% / 0.4);
+
+    /* Dark Mode Sidebar */
+    --sidebar-background: 220 30% 8%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 25% 15%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 220 25% 20%;
+    --sidebar-ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
