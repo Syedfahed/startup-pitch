@@ -187,7 +187,7 @@ export function Dashboard() {
                         onClick={() => handleAnalyse(pitch)}
                         disabled={isLoading}
                       >
-                        Analyse
+                        Evaluat
                       </button>
                     </div>
                     <div className="text-sm text-muted-foreground">

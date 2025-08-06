@@ -194,7 +194,7 @@ export function EvaluationModal({
             <BarChart3 className="w-6 h-6 mr-3" />
             Pitch Evaluation Results
           </DialogTitle>
-          {pitch.filename && (
+          {!isLoading && pitch.filename && (
             <div className="text-sm text-gray-500">
               {pitch.filename} •{" "}
               {pitch.postedTime
