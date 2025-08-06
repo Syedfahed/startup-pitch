@@ -57,7 +57,7 @@ export function Dashboard() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/pitch/upload",
+        "https://startup-pitch-fefk.onrender.com/api/pitch/upload",
         { audioData: data.audio },
         { headers: { "Content-Type": "application/json" } }
       );
