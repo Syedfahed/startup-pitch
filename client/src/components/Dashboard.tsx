@@ -5,13 +5,32 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { RecordingModal } from "./RecordingModal";
 import { EvaluationModal } from "./EvaluationModal";
 import axios from "axios";
-import { expAudio } from "@/lib/data";
+import { expAudio, pichdummydata } from "@/lib/data";
 
 interface Pitch {
   filename: string;
   postedTime: string;
   duration: string;
   audio: string; // base64
+}
+
+interface PitchSate {
+  filename?: string;
+  postedTime?: string;
+  duration: string;
+  transcript?: string;
+  metrics?: {
+    pace: number;
+    tone: string;
+    fillerWords: { count: number; score: number };
+    emotionalWords: { count: number; score: number };
+    storytellingWords: { count: number; score: number };
+    connectionWords: { count: number; score: number };
+    persuasiveWords: { count: number; score: number };
+    clarityWords: { count: number; score: number };
+    confidenceWords: { count: number; score: number };
+    confidence: { count: number; score: number };
+  };
 }
 
 export function Dashboard() {
@@ -31,7 +50,7 @@ export function Dashboard() {
 
   const [pitches, setPitches] = useState<Pitch[]>([]);
   const [isRecording, setIsRecording] = useState(false);
-  const [selectedPitch, setSelectedPitch] = useState<Pitch | null>(null);
+  const [selectedPitch, setSelectedPitch] = useState<PitchSate | null>(pichdummydata);
   const [showEvaluation, setShowEvaluation] = useState(false);
   const [isLoading, setLoading] = useState(false);
   const audioRefs = useRef<(HTMLAudioElement | null)[]>([]);
