@@ -94,7 +94,7 @@ export function Dashboard() {
     setShowEvaluation(true);
     try {
       const response = await axios.post(
-        "https://startup-pitch-fefk.onrender.com/api/pitch/upload",
+        "https://python-aei3.onrender.com/evaluate",
         { audioData: data.audio },
         { headers: { "Content-Type": "application/json" } }
       );

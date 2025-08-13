@@ -79,8 +79,8 @@ export function EvaluationModal({
       tone:
         pitch.metrics.tone === "POSITIVE"
           ? 85
-          : pitch.metrics.tone === "NEGATIVE"
-          ? 40
+          : pitch.metrics.tone === "NEUTRAL"
+          ? 15
           : 65,
       clarity: pitch.metrics.clarityWords.score,
       confidence: pitch.metrics.confidence.score,
